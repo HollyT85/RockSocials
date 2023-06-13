@@ -23,6 +23,7 @@ class ProfileDetail(APIView):
     def get_object(self, pk):
         try:
             profile = Profile.objects.get(pk=pk)
+            self.check_object_permissions(self.request, profile)
             return profile
         except Profile.DoesNotExist:
             raise Http404
