@@ -25,7 +25,7 @@ class Post(models.Model):
         upload_to='images/', default='../default_post_i7zqny', blank=True
     )
     image_filter = models.CharField(
-        max_length=32, choices=image_filter_choices, default='normal'
+        max_length=32, choices=image_filter_choices, default='Normal'
     )
 
     class Meta:
